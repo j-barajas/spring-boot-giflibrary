@@ -14,15 +14,14 @@ import java.time.LocalDate;
 
 @Controller
 public class GifController {
-    @RequestMapping(value="/")
-    public String listGifs(){
+    @RequestMapping("/")
+    public String home(){
         return "home";
     }
 
-
-    @RequestMapping(value = "/gif")
+    @RequestMapping("/gif")
     public String gifDetails(ModelMap modelMap) {
-        Gif gif = new Gif("compiler-bot", LocalDate.of(2015,2,13),"Jorge Barajas",true);
+        Gif gif = new Gif("compiler-bot",LocalDate.of(2018,04,23),"Jorge",true);
         modelMap.put("gif", gif);
         return "gif-details";
     }
