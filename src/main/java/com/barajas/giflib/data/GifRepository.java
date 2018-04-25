@@ -34,8 +34,8 @@ public class GifRepository {
 
     public List<Gif> findByCategoryId(int id){
         List<Gif> gifs = new ArrayList<>();
-        for (Gif gif:gifs) {
-            if(gif.getCatagoryId()==id){
+        for (Gif gif: ALL_GIFS) {
+            if(gif.getCategoryId()==id){
                 gifs.add(gif);
             }
         }

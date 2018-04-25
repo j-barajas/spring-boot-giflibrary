@@ -12,7 +12,7 @@ import java.util.List;
 
 @Component
 public class CategoryRepository {
-    private static final List<Category> ALL_CATAGORIES = Arrays.asList(
+    private static final List<Category> ALL_CATEGORIES = Arrays.asList(
             new Category(1,"Technology"),
             new Category(2,"People"),
             new Category(3,"Destruction")
@@ -25,7 +25,7 @@ public class CategoryRepository {
      * @return the category matching the id
      */
     public Category findById(int id){
-        for (Category category:ALL_CATAGORIES) {
+        for (Category category : ALL_CATEGORIES) {
             if(category.getId()==id){
                 return category;
             }
@@ -34,6 +34,6 @@ public class CategoryRepository {
     }
 
     public List<Category> getAllCategories(){
-        return ALL_CATAGORIES;
+        return ALL_CATEGORIES;
     }
 }

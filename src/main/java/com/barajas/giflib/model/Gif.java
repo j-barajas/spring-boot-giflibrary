@@ -20,12 +20,12 @@ public class Gif {
         this.favorite = favorite;
     }
 
-    public int getCatagoryId() {
+    public int getCategoryId() {
         return categoryId;
     }
 
-    public void setCatagoryId(int catagoryId) {
-        this.categoryId = catagoryId;
+    public void setCategoryId(int categoryId) {
+        this.categoryId = categoryId;
     }
 
     public String getName() {
