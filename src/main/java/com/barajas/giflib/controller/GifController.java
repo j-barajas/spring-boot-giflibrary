@@ -1,6 +1,8 @@
 package com.barajas.giflib.controller;
 
+import com.barajas.giflib.data.CategoryRepository;
 import com.barajas.giflib.data.GifRepository;
+import com.barajas.giflib.model.Category;
 import com.barajas.giflib.model.Gif;
 import com.sun.org.apache.xpath.internal.operations.Mod;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -23,14 +25,13 @@ public class GifController {
     @Autowired
     private GifRepository gifRepository;
 
+
     @RequestMapping("/")
     public String listGifs(ModelMap modelMap){
         List<Gif> allGifs = gifRepository.getAllGifs();
         modelMap.put("gifs", allGifs);
         return "home";
     }
-
-
 
     //@PathVariable  URL=> http://localhost:8080/gif/android-explosion
     @RequestMapping("/gif/{name}")
