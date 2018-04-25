@@ -4,6 +4,7 @@ import com.barajas.giflib.model.Gif;
 import org.springframework.stereotype.Component;
 
 import java.time.LocalDate;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
@@ -29,6 +30,16 @@ public class GifRepository {
                 return gif;
         }
         return null;
+    }
+
+    public List<Gif> findByCategoryId(int id){
+        List<Gif> gifs = new ArrayList<>();
+        for (Gif gif:gifs) {
+            if(gif.getCatagoryId()==id){
+                gifs.add(gif);
+            }
+        }
+        return gifs;
     }
 
     public List<Gif> getAllGifs(){
